@@ -1,0 +1,52 @@
+@import "../../scss/variables";
+
+.IncomeBlock {
+  background: #60A2B21A;
+
+  .nav {
+    height: 85px;
+
+    &-tabs {
+      border-bottom: none;
+
+      .nav-item {
+        height: 100%;
+        min-width: 28%;
+        margin: 0;
+      }
+
+      .nav-link {
+        color: $primary-blue;
+        font-family: $main-font;
+        font-size: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 0;
+        font-weight: 600;
+        transition: all 0.2s;
+        border: none;
+
+        .center-link:last-child span {
+          font-weight: 900;
+        }
+
+        &:hover {
+          background: #356D871C;
+          border: none;
+        }
+
+        &.active {
+          background: #356D871C;
+          border: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+.center-link {
+  margin: 0 auto;
+}

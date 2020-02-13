@@ -1,0 +1,12 @@
+.Button {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  min-width: 142px;
+  height: 40px;
+  font-family: "Open Sans", sans-serif !important;
+
+  &:hover {
+    color: #fff;
+  }
+}

@@ -1,0 +1,22 @@
+@import "src/scss/variables";
+
+.AccountInfo {
+
+  h2 {
+    font-size: 50px;
+    font-family: $main-font;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+
+  p {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: $main-font;
+  }
+
+  img {
+    width: 250px;
+    margin-right: 72px;
+  }
+}

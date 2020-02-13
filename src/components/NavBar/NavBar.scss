@@ -1,0 +1,11 @@
+@import "src/scss/variables";
+
+.NavBar {
+
+  a, .bnt {
+    color: #fff;
+    font-family: $main-font;
+    letter-spacing: 1px;
+  }
+}
+
