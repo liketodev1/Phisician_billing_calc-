@@ -1,0 +1,124 @@
+@import "src/scss/variables";
+
+.Select {
+  width: 320px;
+
+  &.the-trend {
+    margin-left: 88px;
+    width: 346px;
+  }
+
+  &__input {
+    height: 55px;
+    width: 100%;
+    border: 1px solid #232323;
+    border-radius: 5px;
+    background: #fff;
+    padding: 18px;
+    color: $primary-blue;
+    font-family: $main-font;
+    font-weight: 600;
+
+    span {
+      width: 100%;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid $primary-blue;
+        margin-left: 12px;
+      }
+
+    }
+
+  }
+
+  &__label {
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: $main-font;
+  }
+
+  &__dropdown {
+    list-style: none;
+    border: 1px solid #232323;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1px;
+    padding-right: 12px;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    li {
+      padding: 2px 0 2px 21px;
+      transition: all 0.2s;
+      color: $primary-blue;
+      font-family: $main-font;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      &:hover {
+        background: #00000029;
+
+      }
+    }
+  }
+}
+
+.css-2b097c-container {
+  height: fit-content;
+
+  .css-yk16xz-control {
+    height: 55px;
+    width: 100%;
+    border: 1px solid #232323 !important;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0 0 0 17px;
+    color: #0F3E64;
+    font-family: "Opens Sans", sans-serif;
+    font-weight: 600;
+  }
+}
+
+
+.css-1vp0tld-Control::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #0F3E64;
+  margin-right: 6px;
+}
+
+.css-1uccc91-singleValue {
+  color: #0F3E64 !important;
+  font-family: "Opens Sans", sans-serif;
+  font-weight: 600;
+}
+
+.css-1uccc91-singleValue:hover {
+  //background: #000;
+}
+
+.css-1vp0tld-Control {
+  align-items: center;
+}
+
+[class*=option]:hover {
+  background: #ccc;
+}
+
+

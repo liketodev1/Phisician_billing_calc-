@@ -1,0 +1,12 @@
+@import "../../scss/variables";
+
+.Footer {
+  height: 68px;
+  color: #fff;
+  background: $primary-blue;
+
+  &__copyright {
+    color: #7ABBC9;
+    margin-top: 24px;
+  }
+}
