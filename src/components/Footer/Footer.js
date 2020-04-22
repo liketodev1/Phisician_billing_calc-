@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss';
-import Container from '../Container';
+import Container from '../../layouts/Container';
 import Img from '../../components/UI/Img/Img';
 import LogoFooter from '../../assets/images/logo-footer.svg';
 

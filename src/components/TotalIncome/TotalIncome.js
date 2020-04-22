@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from '../../layouts/Container';
-import Card from '../card/Card';
+import Card from '../Card/Card';
 import './TotalIncome.scss';
 // import Select from '../UI/Select/Select';
 import MySelect from '../UI/MySelect/MySelect';
 import Chart from '../Chart/Chart';
+import { connect } from 'react-redux';
+import Cards from '../../Cards/Cards';
+import Pagination from '../Pagination/Pagination';
 // import { Line } from 'react-chartjs-2';
 
-const TotalIncome = () => {
+
+const TotalIncome = ({ billingData }) => {
+
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [cardsPerPage] = useState(6);
+
+// Get current posts
+  const indexOfLastCard = currentPage * cardsPerPage; // 3 * 5 = q15
+  const indexOfFirsCard = indexOfLastCard - cardsPerPage;  // 10 - 5 = 5
+  const currentCards = billingData.slice(indexOfFirsCard, indexOfLastCard);
+
+// Change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
     <>
+      <Pagination cardsPerPage={ cardsPerPage } totalCards={ billingData.length } paginate={ paginate }/>
+
       <Container classes='TotalIncome d-flex justify-content-between flex-wrap'>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Cards currentCards={ currentCards }/>
       </Container>
       <Container classes='d-flex'>
         {/*<Select/>*/ }
@@ -31,4 +45,8 @@ const TotalIncome = () => {
   );
 };
 
-export default TotalIncome;
+const mapState = ({ dataReducer }) => ({
+  billingData: dataReducer.billingData
+});
+
+export default connect(mapState)(TotalIncome);
